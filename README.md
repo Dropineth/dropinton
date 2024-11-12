@@ -23,6 +23,7 @@ Dropin is a decentralized application (DApp) leveraging blockchain technology, d
 
 - **TON Wallet Integration**: Users can connect their TON wallets to participate in the lottery.
 - **Gate Wallet Integration**: Enables cross-platform support with Gate Wallet for ease of transaction and token management.
+- **Referral Program**: Share the lottery to earn referral rewards (0.01 TON per successful invite).
 - **Tree Planting Fund**: A portion of the lottery pool is allocated to a fund that supports reforestation efforts through NFT rewards.
 - **Stable Arbitrage**: TON-USDT swap mechanism ensures that the value of the Tree Planting Fund remains stable and appreciates over time.
 
@@ -68,7 +69,8 @@ Dropin is a decentralized application (DApp) leveraging blockchain technology, d
    - 10% is kept for Dropin’s operations.
 3. **NFT Distribution**: After the lottery draw, the NFTs representing environmental assets are randomly distributed.
 4. **Tree Planting Progress**: A progress bar shows the current completion of the tree planting goal in hectares, indicating the overall progress of the Great Green Wall initiative.
-
+5.**Referral Program**: Share the lottery to earn referral rewards (0.01 TON per successful invite).
+  
 ---
 
 ## **Stable Arbitrage Mechanism**
