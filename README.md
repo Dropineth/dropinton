@@ -1,4 +1,4 @@
-# dropinton
+# DROPINTON
 TON | Hackers League: Winter 2024
 
 
@@ -13,7 +13,7 @@ TON | Hackers League: Winter 2024
 抽奖结果
 [Click here](https://claude.site/artifacts/b0d2dbde-6b26-4750-bdc3-952fc03f1fad)
 
-
+---
 
 **README** that combines the Gate and TON wallet integration with the tree planting fund, and introduces a stable arbitrage mechanism for TON and USDT.
 
