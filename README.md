@@ -6,10 +6,12 @@ TON | Hackers League: Winter 2024
 
 
 # Demo link
-https://claude.site/artifacts/0d0a068b-0bc1-48dd-ae7f-52a9d89178b1
-前端ton mini app demo
-https://claude.site/artifacts/b0d2dbde-6b26-4750-bdc3-952fc03f1fad
-抽奖demo
+
+前端ton mini app 
+[Click here](https://claude.site/artifacts/0d0a068b-0bc1-48dd-ae7f-52a9d89178b1)
+
+抽奖结果
+[Click here](https://claude.site/artifacts/b0d2dbde-6b26-4750-bdc3-952fc03f1fad)
 
 
 
