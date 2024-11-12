@@ -1,6 +1,7 @@
 # dropinton
 TON | Hackers League: Winter 2024
-Here’s an updated **README** that combines the Gate and TON wallet integration with the tree planting fund, and introduces a stable arbitrage mechanism for TON and USDT.
+
+**README** that combines the Gate and TON wallet integration with the tree planting fund, and introduces a stable arbitrage mechanism for TON and USDT.
 
 ---
 
@@ -179,7 +180,7 @@ To run the project locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/DropinProject/Dropin.git
+   git clone https://github.com/Dropineth/dropinton/DropinProject/Dropin.git
    cd Dropin
    ```
 
