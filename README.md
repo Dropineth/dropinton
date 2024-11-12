@@ -274,12 +274,3 @@ We welcome contributions! Please feel free to open an issue or submit a pull req
 For support or inquiries, contact us at dropineth@gmail.com
 
 ---
-
-Feel free to expand or modify the details based on any additional specifications or features!
-
-
-I’ve reviewed the provided concepts and the DeDust protocol structure, and I’ll propose an update to the **Stable Arbitrage Mechanism** section based on the **TON-USDT Swap** functionality. Additionally, I’ll highlight how the code would be implemented and where it might be tracked.
-
-Here is an updated explanation and integration of the **Stable Arbitrage Mechanism** using the **DeDust Protocol** concepts, especially for **TON-USDT swaps**:
-
----
