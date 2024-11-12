@@ -13,7 +13,7 @@ Dropin is a decentralized application (DApp) leveraging blockchain technology, d
 
 ### Key Features
 
-- **TON Wallet Integration**: Users can connect their TON wallets to participate in the lottery.
+- **TON Wallet Integration**: Users can connect their TON or GATE wallets to participate in the lottery.
 - **Gate Wallet Integration**: Enables cross-platform support with Gate Wallet for ease of transaction and token management.
 - **Tree Planting Fund**: A portion of the lottery pool is allocated to a fund that supports reforestation efforts through NFT rewards.
 - **Stable Arbitrage**: TON-USDT swap mechanism ensures that the value of the Tree Planting Fund remains stable and appreciates over time.
