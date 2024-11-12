@@ -69,68 +69,130 @@ Dropin is a decentralized application (DApp) leveraging blockchain technology, d
 3. **NFT Distribution**: After the lottery draw, the NFTs representing environmental assets are randomly distributed.
 4. **Tree Planting Progress**: A progress bar shows the current completion of the tree planting goal in hectares, indicating the overall progress of the Great Green Wall initiative.
 
-### Stable Arbitrage Mechanism
+---
 
-1. **TON-USDT Swap**: When TON’s value reaches a peak, it will be swapped for USDT at a 1:1 ratio to stabilize the Tree Planting Fund.
-2. **Fund Growth**: The Tree Planting Fund is continually growing and will provide consistent support for reforestation projects, without risk of devaluation due to TON market fluctuations.
+## **Stable Arbitrage Mechanism**
+
+The **Stable Arbitrage Mechanism** ensures the Tree Planting Fund’s value remains stable by monitoring the TON price and triggering automatic swaps to USDT when TON’s price reaches a peak. This ensures that the fund is protected from market volatility and continues to grow consistently, supporting reforestation projects without the risk of devaluation.
+
+### **How it Works:**
+
+1. **TON Price Monitoring**: The system constantly monitors the TON market price.
+2. **Swap Trigger**: Once TON’s price exceeds a predefined threshold, the system automatically swaps TON for USDT at a 1:1 ratio.
+3. **Fund Growth**: The swapped USDT is added to the Tree Planting Fund, ensuring the fund grows and remains stable.### Stable Arbitrage Mechanism
+
+### **TON-USDT Swap:**
+
+The **Stable Arbitrage Mechanism** aims to protect the Tree Planting Fund from the volatility of the TON token. When the value of TON spikes, the system automatically triggers a swap to USDT at a 1:1 ratio. This helps maintain the fund’s stability and protects it from the potential devaluation caused by market fluctuations in TON’s value.
+
+To implement this, the following steps are followed:
+
+1. **Identify Optimal TON Price Point**: The mechanism constantly monitors the price of TON in the market. Once the price exceeds a predefined threshold, the system triggers the swap to USDT.
+
+2. **Perform the Swap Using DeDust**: The swap is carried out via the **DeDust Protocol** using the Vault and Pool mechanisms. The Vault will receive the TON tokens and the Pool will handle the conversion to USDT.
+
+3. **Track Fund Balance and Growth**: After the swap, the USDT is held in the Tree Planting Fund, ensuring its value is stable and continually growing. The fund’s growth is tracked via **LP tokens** and liquidity pool management.
 
 ---
 
+### **Code Implementation for TON-USDT Swap (DeDust Protocol)**
+
+Below is the implementation code using the **DeDust SDK** for the TON-USDT swap and the tracking of the Tree Planting Fund balance.
+
+#### **1. Finding the Vault and Pool for TON-USDT Swap**
+
+The following code demonstrates how to use **DeDust** to interact with the Vault and perform the swap once the price of TON reaches a peak:
+
+```typescript
+import { Asset, PoolType, Factory, VaultNative } from '@dedust/sdk';
+import { Address, TonClient4 } from '@ton/ton';
+import { toNano } from '@ton/core';
+
+// Initialize TON client and Factory contract
+const tonClient = new TonClient4({ endpoint: "https://mainnet-v4.tonhubapi.com" });
+const factory = tonClient.open(Factory.createFromAddress(MAINNET_FACTORY_ADDR));
+
+// Define TON and USDT as assets
+const TON = Asset.native();
+const USDT = Asset.jetton(Address.parse('YOUR_USDT_JETTON_ADDRESS'));
+
+// Fetch Vault (TON) and Pool (TON, USDT)
+const tonVault = tonClient.open(await factory.getNativeVault());
+const pool = tonClient.open(await factory.getPool(PoolType.VOLATILE, [TON, USDT]));
+
+// Ensure that the Vault and Pool are deployed
+if ((await pool.getReadinessStatus()) !== ReadinessStatus.READY) {
+  throw new Error('Pool (TON, USDT) does not exist.');
+}
+
+if ((await tonVault.getReadinessStatus()) !== ReadinessStatus.READY) {
+  throw new Error('Vault (TON) does not exist.');
+}
+```
+
+#### **2. Monitoring the TON Price and Triggering the Swap**
+
+This section is responsible for monitoring TON’s price and executing the swap when it reaches a threshold:
+
+```typescript
+// Assume we have a function `getTONPrice()` that fetches the current TON price.
+async function monitorAndSwap() {
+  const tonPrice = await getTONPrice(); // Fetch TON price from an oracle or price feed.
+  const swapThreshold = 1.5; // Define the TON price threshold for triggering the swap.
+
+  if (tonPrice >= swapThreshold) {
+    const amountIn = toNano('100'); // Example: Swap 100 TON to USDT.
+
+    // Send the swap request to the Vault (TON)
+    await tonVault.sendSwap(sender, {
+      poolAddress: pool.address,
+      amount: amountIn,
+      gasAmount: toNano("0.25"),
+    });
+
+    console.log("TON to USDT swap completed successfully.");
+  } else {
+    console.log("TON price not high enough to trigger the swap.");
+  }
+}
+```
+
+#### **3. Tracking Fund Growth:**
+
+The Tree Planting Fund balance in USDT is tracked using **Liquidity Pool** (LP) tokens issued to the fund address after each successful swap. The following code demonstrates how you can track this balance:
+
+```typescript
+const lpWallet = tonClient.open(await pool.getWallet(fundAddress)); // Fund’s wallet to track LP token balance
+const fundBalance = await lpWallet.getBalance();
+
+console.log(`Tree Planting Fund Balance in LP Tokens: ${fundBalance}`);
+```
+
+#### **Tracking the Swap Operation**
+
+For each TON-to-USDT swap, you will need to log the transaction details to monitor fund growth and ensure proper execution. This can be done using the following code:
+
+```typescript
+// Log the swap transaction for audit and tracking
+async function logSwapTransaction(senderAddress: string, amountIn: bigint) {
+  const transactionId = await logTransaction(senderAddress, amountIn); // Implement logging function
+  console.log(`Transaction recorded. ID: ${transactionId}`);
+}
+```
+
+This log function can send transaction details to an off-chain service (e.g., database or analytics platform) for tracking fund flow and stability.
+
+---
+
+
 ## Technical Overview
 
-### 1. **Smart Contracts**
+### **Smart Contracts**
 
 The following smart contracts are responsible for the lottery process, NFT distribution, and the TON-USDT conversion mechanism.
 
 ```solidity
-// Lottery smart contract (Solidity)
-contract DropinLottery {
-    address public admin;
-    uint public totalPool;
-    mapping(address => uint) public participantBalances;
-    address[] public participants;
-    
-    constructor() {
-        admin = msg.sender;
-    }
-    
-    function participate() public payable {
-        require(msg.value == 1 ether, "Must send 1 TON to participate");
-        totalPool += msg.value;
-        participants.push(msg.sender);
-    }
-    
-    function drawLottery() public {
-        require(msg.sender == admin, "Only admin can draw");
-        
-        uint winnerIndex = random() % participants.length;
-        address winner = participants[winnerIndex];
-        
-        // Distribute the rewards
-        payable(winner).transfer(totalPool * 70 / 100);
-        distributeNFTs(participants);
-        
-        // Reset the lottery
-        totalPool = 0;
-        delete participants;
-    }
-
-    function distributeNFTs(address[] memory participants) private {
-        // Logic to randomly distribute NFTs to 99 participants
-    }
-    
-    function random() private view returns (uint) {
-        return uint(keccak256(abi.encodePacked(block.difficulty, block.timestamp, participants)));
-    }
-}
-```
-
-### 2. **TON-USDT Swap Mechanism**
-
-This contract will manage the swap between TON and USDT, based on market conditions:
-
-```solidity
-// TON-USDT Swap Smart Contract (Solidity)
+// Example of smart contract for swap logic
 contract StableArbitrage {
     address public admin;
     uint public tonBalance;
@@ -144,7 +206,6 @@ contract StableArbitrage {
         require(msg.sender == admin, "Only admin can swap");
         require(amount <= tonBalance, "Insufficient TON balance");
         
-        // Example swap logic: Swap TON for USDT at the current rate
         uint usdtAmount = amount * getTONToUSDTPrice();
         usdtBalance += usdtAmount;
         tonBalance -= amount;
@@ -154,8 +215,8 @@ contract StableArbitrage {
     }
 
     function getTONToUSDTPrice() private view returns (uint) {
-        // Implement market price fetch logic (e.g., using Chainlink or other oracles)
-        return 1;  // Simplified for illustration
+        // Implement price fetch from oracle
+        return 1; // Simplified for illustration
     }
     
     function transferToTreeFund(uint amount) private {
@@ -163,7 +224,6 @@ contract StableArbitrage {
     }
 }
 ```
-
 ---
 
 ## DeDust Protocol Integration (Future DeFi Expansion)
@@ -218,4 +278,8 @@ For support or inquiries, contact us at dropineth@gmail.com
 Feel free to expand or modify the details based on any additional specifications or features!
 
 
+I’ve reviewed the provided concepts and the DeDust protocol structure, and I’ll propose an update to the **Stable Arbitrage Mechanism** section based on the **TON-USDT Swap** functionality. Additionally, I’ll highlight how the code would be implemented and where it might be tracked.
 
+Here is an updated explanation and integration of the **Stable Arbitrage Mechanism** using the **DeDust Protocol** concepts, especially for **TON-USDT swaps**:
+
+---
