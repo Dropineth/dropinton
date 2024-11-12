@@ -13,7 +13,7 @@ Dropin is a decentralized application (DApp) leveraging blockchain technology, d
 
 ### Key Features
 
-- **TON Wallet Integration**: Users can connect their TON or GATE wallets to participate in the lottery.
+- **TON Wallet Integration**: Users can connect their TON wallets to participate in the lottery.
 - **Gate Wallet Integration**: Enables cross-platform support with Gate Wallet for ease of transaction and token management.
 - **Tree Planting Fund**: A portion of the lottery pool is allocated to a fund that supports reforestation efforts through NFT rewards.
 - **Stable Arbitrage**: TON-USDT swap mechanism ensures that the value of the Tree Planting Fund remains stable and appreciates over time.
@@ -53,7 +53,7 @@ Dropin is a decentralized application (DApp) leveraging blockchain technology, d
 
 ### Lottery Process
 
-1. **User Participation**: Users connect their TON wallets and pay 1 TON to enter the lottery.
+1. **User Participation**: Users connect their TON or GATE wallets and pay 1 TON to enter the lottery.
 2. **Prize Pool Allocation**: 
    - 70% of the pool goes to the grand winner.
    - 20% is distributed as NFT rewards to 99 random participants.
@@ -162,11 +162,11 @@ contract StableArbitrage {
 
 ### 1. **DeFi Yield Maximizers**
 
-Using the **DeDust Protocol**, users can deposit their TON or USDT in yield farming contracts to maximize their returns. Users can participate in liquidity pools and receive rewards in $DROP or other tokens, helping increase the sustainability of the Tree Planting Fund.
+Using the **DeDust Protocol**, users can deposit their TON or USDT in yield farming contracts to maximize their returns. Users can participate in liquidity pools and receive rewards in $TON or other tokens, helping increase the sustainability of the Tree Planting Fund.
 
 ### 2. **DeDust Swap Implementation**
 
-Users can swap between TON, USDT, and $DROP directly on the DeDust protocol, utilizing automated market makers (AMMs) for efficient and low-cost trading.
+Users can swap between TON and USDT directly on the DeDust protocol, utilizing automated market makers (AMMs) for efficient and low-cost trading.
 
 ### 3. **User-Facing DeFi Apps**
 
@@ -199,6 +199,11 @@ To run the project locally:
 ## Contributing
 
 We welcome contributions! Please feel free to open an issue or submit a pull request. Make sure to follow the contribution guidelines and maintain consistency with the project's goals of sustainability and decentralization.
+
+---
+
+## Contact
+For support or inquiries, contact us at dropineth@gmail.com
 
 ---
 
