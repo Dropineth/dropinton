@@ -71,6 +71,116 @@ Dropin is a decentralized application (DApp) leveraging blockchain technology, d
 4. **Tree Planting Progress**: A progress bar shows the current completion of the tree planting goal in hectares, indicating the overall progress of the Great Green Wall initiative.
 5. **Referral Program**: Share the lottery to earn referral rewards (0.01 TON per successful invite).
 
+### **Step-by-Step Process Breakdown**
+
+#### 1. **User Participation:**
+Users connect their **TON or Gate Wallet** and pay **1 TON** to enter the lottery.
+
+- **TON Wallet Integration**: Users should connect their wallets to the app, which can be done using the TON SDK for mini apps.
+
+```javascript
+// Assuming we have TON SDK integrated in the mini app
+const tonSdk = new TONSDK();  // TON SDK instance
+
+// Function to connect the TON wallet
+async function connectWallet() {
+  try {
+    const wallet = await tonSdk.wallet.connect();  // Connects the wallet
+    console.log("Connected to wallet: ", wallet.address);
+  } catch (error) {
+    console.error("Error connecting wallet: ", error);
+  }
+}
+
+// Example: User presses a button to connect their wallet
+document.getElementById("connect-btn").addEventListener("click", connectWallet);
+```
+
+#### 2. **Prize Pool Allocation:**
+70% of the prize pool goes to the **grand winner**, 20% is distributed as **NFT rewards** to 99 random participants, and 10% is kept for **Dropin's operations**.
+
+```javascript
+// Simulate the Prize Pool Allocation
+const prizePool = 1000;  // Total pool amount in TON
+const grandPrize = prizePool * 0.7;  // 70% to grand winner
+const nftRewards = prizePool * 0.2;  // 20% to 99 participants
+const operationalFund = prizePool * 0.1;  // 10% for Dropin operations
+
+// Simulate winner and participant allocation
+const grandWinner = "0x123abc";  // Example grand winner address
+const nftParticipants = Array(99).fill().map(() => generateRandomAddress());  // Simulate 99 random participants
+
+function generateRandomAddress() {
+  return "0x" + Math.random().toString(16).slice(2, 18);
+}
+
+// Output the prize pool details
+console.log("Grand Winner: ", grandWinner);
+console.log("NFT Rewards: ", nftParticipants);
+console.log("Operational Fund: ", operationalFund);
+```
+
+#### 3. **NFT Distribution:**
+After the lottery draw, NFTs representing environmental assets are randomly distributed to 99 participants.
+
+```javascript
+// Simulating NFT distribution (e.g., tree seeds, solar panels, etc.)
+function distributeNFTs() {
+  const environmentalNFTs = ['Tree Seed NFT', 'Solar Power NFT', 'Water Station NFT', 'Drip Irrigation NFT'];
+  const nftAllocations = nftParticipants.map(() => {
+    const randomNFT = environmentalNFTs[Math.floor(Math.random() * environmentalNFTs.length)];
+    return randomNFT;
+  });
+
+  console.log("NFT Distribution: ", nftAllocations);
+}
+
+// Call to distribute NFTs after the lottery draw
+distributeNFTs();
+```
+
+#### 4. **Tree Planting Progress:**
+A progress bar tracks the tree planting goal, showing hectares planted.
+
+```javascript
+// Simulating tree planting progress
+let hectaresPlanted = 1000000;  // Total hectares planted globally
+let currentProgress = 0.1;  // Progress percentage (10%)
+
+// Update progress bar (for example, in a UI component)
+function updateProgress() {
+  const progressBar = document.getElementById("progress-bar");
+  progressBar.style.width = `${currentProgress * 100}%`;  // Update progress bar
+  console.log(`Current Progress: ${currentProgress * 100}%`);
+}
+
+// Call the progress update function periodically
+setInterval(updateProgress, 1000);  // Update every 1 second for demo
+```
+
+#### 5. **Referral Program:**
+Share the lottery to earn referral rewards (0.01 TON per successful invite).
+
+```javascript
+// Simulate the referral program where user earns 0.01 TON for each successful invite
+let referralCount = 0;
+
+function shareLotteryLink() {
+  // Example function to share the lottery link
+  const referralLink = "https://dropin-lottery.com";
+  alert(`Share this link: ${referralLink}`);
+
+  // Simulate a successful referral
+  referralCount++;
+  console.log(`Referral Count: ${referralCount}`);
+  const referralReward = 0.01 * referralCount;  // 0.01 TON per referral
+  console.log(`Referral Rewards: ${referralReward} TON`);
+}
+
+// Example usage: User presses a button to share the lottery link
+document.getElementById("share-btn").addEventListener("click", shareLotteryLink);
+```
+
 # Dropin Lucky Draw Mini App (TON Integration)
 
 ## Overview
