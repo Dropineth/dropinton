@@ -174,7 +174,7 @@ Create easy-to-use interfaces for users to interact with yield farming, staking,
 
 ---
 
-## Installation
+## Installation（building）
 
 To run the project locally:
 
