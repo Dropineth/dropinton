@@ -70,7 +70,76 @@ Dropin is a decentralized application (DApp) leveraging blockchain technology, d
 3. **NFT Distribution**: After the lottery draw, the NFTs representing environmental assets are randomly distributed.
 4. **Tree Planting Progress**: A progress bar shows the current completion of the tree planting goal in hectares, indicating the overall progress of the Great Green Wall initiative.
 5.**Referral Program**: Share the lottery to earn referral rewards (0.01 TON per successful invite).
-  
+
+# Dropin Lucky Draw Mini App (TON Integration)
+
+## Overview
+
+The **Dropin Lucky Draw** is a TON-based decentralized application (DApp) designed to gamify reforestation efforts and engage the community through blockchain technology. This app enables users to participate in a lottery that funds tree-planting projects and rewards participants with NFTs tied to environmental assets.
+
+## Features
+
+- **TON Wallet Integration**: Connect with Gate or TON wallet to participate in the lottery.
+- **Lottery Prize Pool Allocation**: 70% goes to the grand prize winner, 20% to 99 NFT recipients, and 10% for Dropin operations.
+- **NFT Rewards**: Random distribution of NFTs, including solar power stations, air water stations, and carbon-sequestering tree seeds.
+- **Tree Planting Progress**: A progress bar that tracks the overall planting goal of 1 billion hectares.
+- **Referral Program**: Share the lottery to earn referral rewards (0.01 TON per successful invite).
+
+## How It Works
+
+### 1. **User Participation**:
+- Connect your **TON or Gate wallet** and pay **1 TON** to enter the lottery.
+
+### 2. **Prize Pool Allocation**:
+- **70%** of the pool is awarded to the **grand winner**.
+- **20%** is distributed as **NFT rewards** to 99 random participants.
+- **10%** is kept for **Dropin's operational costs**.
+
+### 3. **NFT Distribution**:
+- After the lottery draw, **NFTs representing environmental assets** are **randomly distributed** to 99 participants.
+
+### 4. **Tree Planting Progress**:
+- A **progress bar** shows the current completion of the tree planting goal, measured in hectares.
+
+### 5.**Referral Program**: 
+- Share the lottery to earn referral rewards (0.01 TON per successful invite).
+
+---
+
+## Code Example
+
+### **Sample Code Snippet for Prize Pool Allocation (JavaScript)**
+
+```javascript
+// Simulate the Prize Pool allocation
+const prizePool = 1000; // Total pool amount in TON
+const grandPrize = prizePool * 0.7; // 70% goes to grand winner
+const nftRewards = prizePool * 0.2; // 20% distributed to 99 random participants
+const operationalFund = prizePool * 0.1; // 10% for Dropin operations
+
+// Winner distribution
+const grandWinner = "0x123abc"; // Example wallet address
+const nftParticipants = Array(99).fill().map(() => generateRandomAddress()); // Simulate 99 random participants
+
+console.log("Grand Winner: ", grandWinner);
+console.log("NFT Rewards for 99 Participants: ", nftParticipants);
+console.log("Operational Fund: ", operationalFund);
+
+// Helper function to generate random addresses for participants (simulation)
+function generateRandomAddress() {
+  return "0x" + Math.random().toString(16).slice(2, 18);
+}
+
+// Simulating the result display
+function displayResults() {
+  alert(`Grand Prize: ${grandPrize} TON awarded to: ${grandWinner}`);
+  alert(`NFT rewards (Total: ${nftRewards} TON) distributed to 99 participants`);
+  alert(`Dropin Operational Fund: ${operationalFund} TON`);
+}
+
+// Call the display function to show results
+displayResults();
+```
 ---
 
 ## **Stable Arbitrage Mechanism**
