@@ -9,7 +9,7 @@ TON | Hackers League: Winter 2024
 
 ## Overview
 
-Dropin is a decentralized application (DApp) leveraging blockchain technology, designed to engage users in sustainable practices through gamified lotteries and environmental impact. Dropin allows users to participate in a lottery system, where funds are allocated to real-world reforestation initiatives, like the UN’s Great Green Wall, through the sale of NFTs that represent various environmental assets.
+Dropin is a decentralized application (DApp) leveraging blockchain technology, designed to engage users in sustainable practices through gamified lotteries and environmental impact. Dropin allows users to participate in a lottery system, where funds are allocated to real-world reforestation initiatives, like the UN’s Great Green Wall and AFR100, through the sale of NFTs that represent various environmental assets.
 
 ### Key Features
 
