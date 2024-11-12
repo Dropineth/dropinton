@@ -14,7 +14,7 @@ TON | Hackers League: Winter 2024
 
 ---
 
-**README** that combines the Gate and TON wallet integration with the tree planting fund, and introduces a stable arbitrage mechanism for TON and USDT.
+# **README** that combines the Gate and TON wallet integration with the tree planting fund, and introduces a stable arbitrage mechanism for TON and USDT.
 
 ---
 
