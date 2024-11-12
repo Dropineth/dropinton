@@ -1,6 +1,14 @@
 # dropinton
 TON | Hackers League: Winter 2024
 
+
+# Pitch video
+
+
+# Demo link
+
+
+
 **README** that combines the Gate and TON wallet integration with the tree planting fund, and introduces a stable arbitrage mechanism for TON and USDT.
 
 ---
@@ -208,3 +216,6 @@ For support or inquiries, contact us at dropineth@gmail.com
 ---
 
 Feel free to expand or modify the details based on any additional specifications or features!
+
+
+
