@@ -69,7 +69,7 @@ Dropin is a decentralized application (DApp) leveraging blockchain technology, d
    - 10% is kept for Dropin’s operations.
 3. **NFT Distribution**: After the lottery draw, the NFTs representing environmental assets are randomly distributed.
 4. **Tree Planting Progress**: A progress bar shows the current completion of the tree planting goal in hectares, indicating the overall progress of the Great Green Wall initiative.
-5.**Referral Program**: Share the lottery to earn referral rewards (0.01 TON per successful invite).
+5. **Referral Program**: Share the lottery to earn referral rewards (0.01 TON per successful invite).
 
 # Dropin Lucky Draw Mini App (TON Integration)
 
