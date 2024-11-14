@@ -4,6 +4,7 @@ TON | Hackers League: Winter 2024
 
 # Pitch video
 
+[PITCH DECK](https://www.figma.com/slides/GTICoLProA10dfbn2PSBOO/Untitled?node-id=43-129&t=YTp2pVAPMvCa5HVg-1)
 
 # Demo link
 
