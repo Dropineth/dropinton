@@ -4,11 +4,11 @@ TON | Hackers League: Winter 2024
 
 # Pitch video
 
-[PITCH DECK](https://www.figma.com/slides/GTICoLProA10dfbn2PSBOO/Untitled?node-id=43-129&t=YTp2pVAPMvCa5HVg-1)
+[PITCH video](https://www.figma.com/slides/GTICoLProA10dfbn2PSBOO/Untitled?node-id=43-129&t=YTp2pVAPMvCa5HVg-1)
 
 # Demo link
 
-[前端ton mini app ](https://claude.site/artifacts/0d0a068b-0bc1-48dd-ae7f-52a9d89178b1)
+[ton mini app ](https://t.me/dropin_lotto_bot?startapp=tg-2026552626)
 
 
 [抽奖结果](https://claude.site/artifacts/b0d2dbde-6b26-4750-bdc3-952fc03f1fad)
