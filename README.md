@@ -11,8 +11,6 @@ TON | Hackers League: Winter 2024
 [ton mini app ](https://t.me/dropin_lotto_bot?startapp=tg-2026552626)
 
 
-[抽奖结果](https://claude.site/artifacts/b0d2dbde-6b26-4750-bdc3-952fc03f1fad)
-
 ---
 
 # **README** 
