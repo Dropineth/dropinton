@@ -13,12 +13,6 @@ TON | Hackers League: Winter 2024
 
 ---
 
-# **README** 
-
-that combines the Gate and TON wallet integration with the tree planting fund, and introduces a stable arbitrage mechanism for TON and USDT.
-
----
-
 # Dropin Project: Decentralized Lottery with Tree Planting Fund
 
 ## Overview
@@ -27,11 +21,28 @@ Dropin is a decentralized application (DApp) leveraging blockchain technology, d
 
 ### Key Features
 
-- **TON Wallet Integration**: Users can connect their TON wallets to participate in the lottery.
-- **Gate Wallet Integration**: Enables cross-platform support with Gate Wallet for ease of transaction and token management.
-- **Referral Program**: Share the lottery to earn referral rewards (0.01 TON per successful invite).
-- **Tree Planting Fund**: A portion of the lottery pool is allocated to a fund that supports reforestation efforts through NFT rewards.
-- **Stable Arbitrage**: TON-USDT swap mechanism ensures that the value of the Tree Planting Fund remains stable and appreciates over time.
+
+1. **TON & Gate Wallet Integration**: 
+   - Seamless wallet connectivity for deposits and withdrawals.
+   - Cross-platform compatibility for broader user access.
+
+2. **Decentralized Lottery**: 
+   - 70% of the prize pool is awarded to a grand winner.
+   - 20% is distributed as NFTs representing environmental assets like solar power stations and tree seeds.
+
+3. **Tree Planting Fund**: 
+   - Supports reforestation projects through the proceeds of NFTs.
+   - Users also have a chance to receive $DOP tokens as random rewards from the fund.（building）
+
+4. **Stable Arbitrage**: 
+   - A TON-USDT swap mechanism maintains the stability of the Tree Planting Fund by converting TON into USDT during price surges.
+
+5. **Referral Rewards**: 
+   - Invite new users to participate in the lottery.
+   - Top 3 referrers earn rewards: **5 TON**, **2 TON**, and **1 TON**, respectively.
+
+6. **AdTON Advertising Module**: （building）
+   - Airdrops from partner projects are randomly distributed into the lottery prize pool to incentivize participation and collaboration.
 
 ---
 
@@ -75,7 +86,9 @@ Dropin is a decentralized application (DApp) leveraging blockchain technology, d
    - 10% is kept for Dropin’s operations.
 3. **NFT Distribution**: After the lottery draw, the NFTs representing environmental assets are randomly distributed.
 4. **Tree Planting Progress**: A progress bar shows the current completion of the tree planting goal in hectares, indicating the overall progress of the Great Green Wall initiative.
-5. **Referral Program**: Share the lottery to earn referral rewards (0.01 TON per successful invite).
+5. **Referral Rewards**: 
+   - Invite new users to participate in the lottery.
+   - Top 3 referrers earn rewards: **5 TON**, **2 TON**, and **1 TON**, respectively.
 
 ### **Step-by-Step Process Breakdown**
 
@@ -163,28 +176,21 @@ function updateProgress() {
 // Call the progress update function periodically
 setInterval(updateProgress, 1000);  // Update every 1 second for demo
 ```
-
-#### 5. **Referral Program:**
-Share the lottery to earn referral rewards (0.01 TON per successful invite).
+### 5.Referral Rewards Distribution
 
 ```javascript
-// Simulate the referral program where user earns 0.01 TON for each successful invite
-let referralCount = 0;
+// Simulate top 3 referrers and reward distribution
+const referrers = [
+  { name: "User A", invites: 50 },
+  { name: "User B", invites: 30 },
+  { name: "User C", invites: 20 },
+];
 
-function shareLotteryLink() {
-  // Example function to share the lottery link
-  const referralLink = "https://dropin-lottery.com";
-  alert(`Share this link: ${referralLink}`);
+const rewards = [5, 2, 1]; // Rewards in TON for top 3
 
-  // Simulate a successful referral
-  referralCount++;
-  console.log(`Referral Count: ${referralCount}`);
-  const referralReward = 0.01 * referralCount;  // 0.01 TON per referral
-  console.log(`Referral Rewards: ${referralReward} TON`);
-}
-
-// Example usage: User presses a button to share the lottery link
-document.getElementById("share-btn").addEventListener("click", shareLotteryLink);
+referrers.slice(0, 3).forEach((referrer, index) => {
+  console.log(`${referrer.name} receives ${rewards[index]} TON for ${referrer.invites} invites`);
+});
 ```
 
 # Dropin Lucky Draw Mini App (TON Integration)
@@ -199,7 +205,9 @@ The **Dropin Lucky Draw** is a TON-based decentralized application (DApp) design
 - **Lottery Prize Pool Allocation**: 70% goes to the grand prize winner, 20% to 99 NFT recipients, and 10% for Dropin operations.
 - **NFT Rewards**: Random distribution of NFTs, including solar power stations, air water stations, and carbon-sequestering tree seeds.
 - **Tree Planting Progress**: A progress bar that tracks the overall planting goal of 1 billion hectares.
-- **Referral Program**: Share the lottery to earn referral rewards (0.01 TON per successful invite).
+- **Referral Rewards**: 
+   - Invite new users to participate in the lottery.
+   - Top 3 referrers earn rewards: **5 TON**, **2 TON**, and **1 TON**, respectively.
 
 ## How It Works
 
@@ -217,8 +225,9 @@ The **Dropin Lucky Draw** is a TON-based decentralized application (DApp) design
 ### 4. **Tree Planting Progress**:
 - A **progress bar** shows the current completion of the tree planting goal, measured in hectares.
 
-### 5.**Referral Program**: 
-- Share the lottery to earn referral rewards (0.01 TON per successful invite).
+### 5.**Referral Rewards**: 
+   - Invite new users to participate in the lottery.
+   - Top 3 referrers earn rewards: **5 TON**, **2 TON**, and **1 TON**, respectively.
 
 ---
 
@@ -461,3 +470,18 @@ We welcome contributions! Please feel free to open an issue or submit a pull req
 For support or inquiries, contact us at dropineth@gmail.com
 
 ---
+
+### TEAM
+
+## Y.C.  Co-FOUNDER
+A seasoned blockchain and full-stack development expert with over a decade of experience at top-tier companies like HashKey Cloud, Binance, and MyTV Super, leading innovative Web3 solutions, enhancing security architectures, driving DeFi product development, and optimizing system operations across diverse industries.
+
+## CAT BOSS Co-FOUNDER 
+With over 15 years of experience in internet technology, including roles at renowned companies such as McCann Worldgroup, Hopen, and ISAILSOFT, I bring expertise in global project collaboration, B2B2C technical solutions, and Web3 product development. 
+
+## YU Co_FOUNDER
+Host of Shenzhen HackathonWeekly, Initiator of AI Co-learning Sessions on Tuesday and Thursday evenings.  
+Five years of experience as a UX designer in top-tier tech companies. , specializing in consumer-facing content monetization products (serving both domestic and international markets) and high-engagement tools (with tens of millions of daily active users). Proficient in B2B AI backend design, with extensive expertise in end-to-end design and user experience optimization.
+
+## LEE FOUNDER
+10+ years of experience in TMT \Consumer\ ESG investment research. Focused on sustainable killer applications in Web2 and Web3. Former member of CMRC's science and technology enterprise marketing and business growth research group.
