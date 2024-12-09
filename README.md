@@ -483,5 +483,8 @@ With over 15 years of experience in internet technology, including roles at reno
 Host of Shenzhen HackathonWeekly, Initiator of AI Co-learning Sessions on Tuesday and Thursday evenings.  
 Five years of experience as a UX designer in top-tier tech companies. , specializing in consumer-facing content monetization products (serving both domestic and international markets) and high-engagement tools (with tens of millions of daily active users). Proficient in B2B AI backend design, with extensive expertise in end-to-end design and user experience optimization.
 
+## RUBY Co_FOUNDER
+A full-stack developer with 10 years of experience in big data, e-commerce, and online education. Led large front-end teams, delivering projects like data monitoring and micro-frontend implementation. Over the past year, focused on Web3, contributing to multiple hackathons and gaining hands-on experience across various blockchains, driving practical blockchain applications.
+
 ## LEE FOUNDER
 10+ years of experience in TMT \Consumer\ ESG investment research. Focused on sustainable killer applications in Web2 and Web3. Former member of CMRC's science and technology enterprise marketing and business growth research group.
