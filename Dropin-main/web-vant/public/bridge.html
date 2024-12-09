@@ -1,0 +1,11 @@
+<script>
+    const qs = new URLSearchParams(location.search)
+    const target = qs.get('target')
+    if (target == 'game') {
+        location.href = qs.get('url')
+    } else if (target == 'close') {
+        window.parent.__closeGameIframe();
+    } else {
+        document.write('do what ???')
+    }
+</script>

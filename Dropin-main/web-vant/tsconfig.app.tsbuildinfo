@@ -1,0 +1,1 @@
+{"root":["./src/webapp.ts","./src/main.ts","./src/utils.ts","./src/vite-env.d.ts","./src/app.vue","./src/pages/friends.info.vue","./src/pages/friends.vue","./src/pages/home.info.vue","./src/pages/home.vue","./src/pages/tasks.vue","./src/pages/wallet.vue"],"version":"5.6.2"}

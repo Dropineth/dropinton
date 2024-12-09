@@ -1,0 +1,30 @@
+{
+  "name": "web-vant",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev2": "vite -c vite.config.local.ts",
+    "build:check": "vue-tsc -b && vite build",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@telegram-apps/sdk": "^1.1.3",
+    "@twa-dev/sdk": "^7.10.1",
+    "@townsquarelabs/ui-vue": "^2.0.10-beta.0",
+    "less": "^4.2.0",
+    "vant": "^4.9.7",
+    "vue": "^3.4.37"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "@vitejs/plugin-basic-ssl": "^1.1.0",
+    "@vitejs/plugin-vue": "^5.1.2",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1",
+    "vue-tsc": "^2.0.29",
+    "vite-plugin-externals": "^0.6.2"
+  }
+}
