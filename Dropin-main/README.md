@@ -4,13 +4,6 @@ DROPINTON
 
 Web3Labs X TON Foundation Global Accelerator Program
 
-Pitch video
-
-PITCH video
-
-Demo link
-
-ton mini app
 
 Dropin Project: Decentralized Lottery with Tree Planting Fund
 
